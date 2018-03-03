@@ -1,9 +1,23 @@
+interface Theatre {
+    public String opsDirector = "Chris B";
+    public void addRehearsal();
+    public void deleteRehearsal();
 
-class Production {
+}
+
+class Production implements Theatre {
     public float scenicBudget;
     public float paintBudget;
     private float budget;
     public String director;
+
+    public void addRehearsal() {
+        System.out.println("Rehearsal Added");
+    }
+
+    public void deleteRehearsal() {
+        System.out.println("Rehearsal Deleted");
+    }
 
     public Production (String director, float scenicBudget, float paintBudget) {
         this.director = director;
@@ -39,6 +53,9 @@ public class show {
         System.out.println("Music Budget:" + mymusical.musicBudget);
         System.out.println("Director:" + mymusical.director);
         System.out.println("Musical Director:" + mymusical.musicalDirector);
+        System.out.println("Ops Director:" + mymusical.opsDirector);
+        mymusical.addRehearsal();
+        mymusical.deleteRehearsal();
     }
 }
 
