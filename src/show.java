@@ -7,7 +7,7 @@ public class show {
         System.out.println("Music Budget:" + mymusical.musicBudget);
         System.out.println("Director:" + mymusical.director);
         System.out.println("Musical Director:" + mymusical.musicalDirector);
-        System.out.println("Ops Director:" + mymusical.opsDirector);
+        System.out.println("Ops Director:" + Musical.opsDirector);
         mymusical.addRehearsal();
         mymusical.deleteRehearsal();
     }
